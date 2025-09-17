@@ -8,7 +8,6 @@ struct Node {
 
 Node* start = nullptr;
 
-// Insert node at tail
 void append(int v) {
     Node* fresh = new Node;
     fresh->val = v;
@@ -25,7 +24,6 @@ void append(int v) {
     walk->next = fresh;
 }
 
-// Count how many times a value appears
 int frequency(int k) {
     int cnt = 0;
     for (Node* ptr = start; ptr; ptr = ptr->next) {
@@ -34,7 +32,6 @@ int frequency(int k) {
     return cnt;
 }
 
-// Remove all nodes with given value
 void removeKey(int k) {
     while (start && start->val == k) {
         Node* gone = start;
@@ -57,7 +54,6 @@ void removeKey(int k) {
     }
 }
 
-// Display list
 void display() {
     Node* ptr = start;
     while (ptr) {
