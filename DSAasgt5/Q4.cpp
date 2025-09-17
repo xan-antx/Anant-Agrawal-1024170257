@@ -8,7 +8,6 @@ struct Node {
 
 Node* start = nullptr;
 
-// Add node to end
 void addNode(int x) {
     Node* fresh = new Node;
     fresh->val = x;
@@ -25,7 +24,6 @@ void addNode(int x) {
     walk->link = fresh;
 }
 
-// Reverse the linked list
 Node* invert(Node* headRef) {
     Node* prev = nullptr;
     Node* curr = headRef;
@@ -37,8 +35,6 @@ Node* invert(Node* headRef) {
     }
     return prev;
 }
-
-// Print list
 void show(Node* ptr) {
     while (ptr) {
         cout << ptr->val << " -> ";
